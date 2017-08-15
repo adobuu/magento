@@ -42,7 +42,7 @@ class Mini_Project_Block_Adminhtml_Sales_Order_Grid extends Mage_Adminhtml_Block
 
     protected function _prepareColumns()
     {
-        $helper = Mage::helper('mini_orders');
+        $helper = Mage::helper('mini_project');
         $currency = (string) Mage::getStoreConfig(Mage_Directory_Model_Currency::XML_PATH_CURRENCY_BASE);
 
         $this->addColumn('increment_id', array(
