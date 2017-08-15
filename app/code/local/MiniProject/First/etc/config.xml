@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MiniProject_First>
+            <version>0.1.0</version>
+        </MiniProject_First>
+    </modules>
+<frontend>
+    <routers>
+        <first>
+            <use>standard</use>
+            <args>
+                <module>MiniProject_First</module>
+                <frontName>first</frontName>
+            </args>
+        </first>
+    </routers>
+    <!--ACCOUNT CONTROLLER-->
+    <routers>
+        <customer>
+            <args>
+                <modules>
+                    <miniproject_first before="Mage_Customer">MiniProject_First</miniproject_first>
+                </modules>
+            </args>
+        </customer>
+    </routers>
+
+        <!--LAYOUT-->
+    <layout>
+        <updates>
+            <first module="MiniProject_First">
+                <file>miniproject.xml</file>
+            </first>
+        </updates>
+    </layout>
+    <!--END LAYOUTS-->
+
+</frontend>
+    <!--END ACCOUNT CONTROLLER-->
+
+    <global>
+
+        <blocks>
+            <first>
+                <class>MiniProject_First_Block</class>
+            </first>
+        </blocks>
+
+    <blocks>
+        <page>
+            <rewrite>
+                <html_welcome>MiniProject_First_Block_Html_Welcome</html_welcome>
+            </rewrite>
+        </page>
+    </blocks>
+    </global>
+</config>
+
+
