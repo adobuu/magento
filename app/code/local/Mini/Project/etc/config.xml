@@ -10,28 +10,28 @@
         <models>
             <mini_project>
                 <class>Mini_Project_Model</class>
-                <resourceModel>inchoo_orders_resource</resourceModel>
+                <resourceModel>mini_project_resource</resourceModel>
             </mini_project>
         </models>
 
         <resources>
-            <inchoo_orders_setup>
+            <mini_project_setup>
                 <setup>
-                    <module>Inchoo_Orders</module>
+                    <module>Mini_Project</module>
                 </setup>
-            </inchoo_orders_setup>
+            </mini_project_setup>
         </resources>
 
         <blocks>
-            <inchoo_orders>
-                <class>Inchoo_Orders_Block</class>
-            </inchoo_orders>
+            <mini_project>
+                <class>Mini_Project_Block</class>
+            </mini_project>
         </blocks>
 
         <helpers>
-            <inchoo_orders>
-                <class>Inchoo_Orders_Helper</class>
-            </inchoo_orders>
+            <mini_project>
+                <class>Mini_Project_Helper</class>
+            </mini_project>
         </helpers>
     </global>
 
@@ -40,7 +40,7 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <inchoo_orders before="Mage_Adminhtml">Inchoo_Orders_Adminhtml</inchoo_orders>
+                        <mini_project before="Mage_Adminhtml">Mini_Project_Adminhtml</mini_project>
                     </modules>
                 </args>
             </adminhtml>
