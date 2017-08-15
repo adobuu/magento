@@ -5,4 +5,48 @@
             <version>0.1.0</version>
         </Mini_Project>
     </modules>
+    <frontend>
+        <routers>
+            <checkouts>
+                <args>
+                    <modules>
+                        <mini_project before="Mage_Checkout">Mini_Project</mini_project>
+                    </modules>
+                </args>
+            </checkouts>
+        </routers>
+    </frontend>
+    <global>
+        <helpers>
+            <project>
+                <class>Mini_Project_Helper</class>
+            </project>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <project>
+                <use>admin</use>
+                <args>
+                    <module>Mini_Project</module>
+                    <frontName>project</frontName>
+                </args>
+            </project>
+        </routers>
+    </admin>
+    <adminhtml>
+        <menu>
+            <project_adminform translate="title" module="project">
+                <title>Distributors</title>
+                <action>project/adminhtml_distributor</action>
+            </project_adminform>
+        </menu>
+        <layout>
+            <updates>
+                <project>
+                    <file>distributor.xml</file>
+                </project>
+            </updates>
+        </layout>
+    </adminhtml>
 </config>
