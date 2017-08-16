@@ -59,11 +59,14 @@
         </models>
 
         <resources>
-            <mini_project_setup>
+            <project_setup>
                 <setup>
                     <module>Mini_Project</module>
                 </setup>
-            </mini_project_setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </project_setup>
         </resources>
 
         <blocks>
@@ -77,8 +80,8 @@
                 <class>Mini_Project_Helper</class>
             </mini_project>
         </helpers>
-    </global>
 
+    </global>
     <admin>
         <routers>
             <adminhtml>
