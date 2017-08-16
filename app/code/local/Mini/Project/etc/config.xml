@@ -22,7 +22,7 @@
     <!--END FRONTEND-->
     <!--GLOBAL-->
     <global>
-        <!--DECLARE PROJECT RESOURCE MODEL-->
+        <!--DECLARES PROJECT RESOURCE MODEL-->
             <models>
                 <mini_project>
                     <class>Mini_Project_Model</class>
