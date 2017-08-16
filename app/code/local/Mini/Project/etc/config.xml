@@ -69,9 +69,14 @@
             <!--END RESOURCE-->
             <!--BLOCKS-->
             <blocks>
-            <project>
-                <class>Mini_Project_Block</class>
-            </project>
+                <project>
+                    <class>Mini_Project_Block</class>
+                </project>
+            </blocks>
+            <blocks>
+                <mini_project>
+                    <class>Mini_Project_Block</class>
+                </mini_project>
             </blocks>
             <!--END BLOCKS-->
             <!--DECLARE ADMIN HELPER-->
