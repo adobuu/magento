@@ -38,8 +38,20 @@
         <menu>
             <project_adminform translate="title" module="project">
                 <title>Distributors</title>
+              <sort_order>10</sort_order>
+          <children>
+            <index translate="title" module="mini_project">
+                <title>Orders</title>
+              <sort_order>1</sort_order>
                 <action>project/adminhtml_distributor</action>
-            </project_adminform>
+            </index>
+            <list translate="title" module="mini_project">
+                <title>Manage Distributor</title>
+                <sort_order>2</sort_order>
+                <action>project/adminhtml_event</action>
+            </list>
+        </children>
+         </project_adminform>
         </menu>
         <layout>
             <updates>

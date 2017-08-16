@@ -7,7 +7,10 @@ class Mini_Project_Adminhtml_DistributorController extends Mage_Adminhtml_Contro
         $this->loadLayout();
       //  $this->_setActiveMenu('mini_project');
         $this->_addContent($this->getLayout()->createBlock('mini_project/adminhtml_distributor_order'));
-        $this->renderLayout();
+    //    $this->_addContent($this->getLayout()->createBlock('mini_project/adminhtml_event_edit'));
+
+
+        return $this->renderLayout();
     }
     public function gridAction()
     {

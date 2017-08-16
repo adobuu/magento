@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <layout>
-    <project_adminhtml_distributor_index>
+    <project_adminhtml_order_index>
             <reference name="content">
                 <block type="adminhtml/template" name="distributor" template="test/distributor.phtml"/>
             </reference>
-    </project_adminhtml_distributor_index>
+    </project_adminhtml_order_index>
 </layout>
