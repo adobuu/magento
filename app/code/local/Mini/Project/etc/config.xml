@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
 <config>
+    <!--MODULE-->
     <modules>
         <Mini_Project>
             <version>0.1.0</version>
         </Mini_Project>
     </modules>
+    <!--END MODULE-->
+    <!--FRONTEND-->
     <frontend>
         <routers>
             <checkouts>
@@ -16,13 +19,75 @@
             </checkouts>
         </routers>
     </frontend>
+    <!--END FRONTEND-->
+    <!--GLOBAL-->
     <global>
-        <helpers>
-            <project>
+        <!--DECLARE PROJECT RESOURCE MODEL-->
+            <models>
+                <mini_project>
+                    <class>Mini_Project_Model</class>
+                    <resourceModel>mini_project_resource</resourceModel>
+                </mini_project>
+                    <mini_project_resource>
+                        <class>Mini_Project_Model_Resource</class>
+                            <entities>
+                                <distributor>
+                                    <table>distributor</table>
+                                </distributor>
+                            </entities>
+                    </mini_project_resource>
+            </models>
+        <!--END PROJECT RESOURCE MODEL-->
+            <!--RESOURCE-->
+            <resources>
+                    <!--DECLARE MYSQL DATABASE-->
+                <project_setup>
+                    <setup>
+                        <module>Mini_Project</module>
+                    </setup>
+                    <connection>
+                        <use>core_setup</use>
+                    </connection>
+                </project_setup>
+                    <!--END MYSQL DATABASE-->
+                    <!--DELCARE CONNECTION-->
+                        <mini_project_write>
+                            <connection>
+                                <use>core_write</use>
+                            </connection>
+                        </mini_project_write>
+                        <mini_project_read>
+                            <connection>
+                                <use>core_read</use>
+                            </connection>
+                        </mini_project_read>
+                    <!--END CONNECTION-->
+            </resources>
+            <!--END RESOURCE-->
+            <!--BLOCKS-->
+            <blocks>
+            <mini_project>
+                <class>Mini_Project_Block</class>
+            </mini_project>
+            </blocks>
+            <!--END BLOCKS-->
+            <!--DECLARE ADMIN HELPER-->
+            <helpers>
+            <mini_project>
                 <class>Mini_Project_Helper</class>
-            </project>
+            </mini_project>
         </helpers>
+            <!--END ADMIN HELPER-->
+            <!--HELPER-->
+            <helpers>
+                <project>
+                    <class>Mini_Project_Helper</class>
+                </project>
+            </helpers>
+            <!--END HELPER-->
     </global>
+    <!--END GLOBAL-->
+        <!--ADMIN-->
     <admin>
         <routers>
             <project>
@@ -34,24 +99,26 @@
             </project>
         </routers>
     </admin>
+    <!--END ADMIN-->
+    <!--ADMIN-->
     <adminhtml>
         <menu>
             <project_adminform translate="title" module="project">
                 <title>Distributors</title>
-              <sort_order>10</sort_order>
-          <children>
-            <index translate="title" module="mini_project">
-                <title>Orders</title>
-              <sort_order>1</sort_order>
-                <action>project/adminhtml_distributor</action>
-            </index>
-            <list translate="title" module="mini_project">
-                <title>Manage Distributor</title>
-                <sort_order>2</sort_order>
-                <action>project/adminhtml_event</action>
-            </list>
-        </children>
-         </project_adminform>
+                <sort_order>10</sort_order>
+                <children>
+                    <index translate="title" module="mini_project">
+                        <title>Orders</title>
+                        <sort_order>1</sort_order>
+                        <action>project/adminhtml_distributor</action>
+                    </index>
+                    <list translate="title" module="mini_project">
+                        <title>Manage Distributor</title>
+                        <sort_order>2</sort_order>
+                        <action>project/adminhtml_event</action>
+                    </list>
+                </children>
+            </project_adminform>
         </menu>
         <layout>
             <updates>
@@ -61,48 +128,7 @@
             </updates>
         </layout>
     </adminhtml>
+    <!--END ADMIN-->
 
-    <global>
-        <models>
-            <mini_project>
-                <class>Mini_Project_Model</class>
-                <resourceModel>mini_project_resource</resourceModel>
-            </mini_project>
-        </models>
 
-        <resources>
-            <project_setup>
-                <setup>
-                    <module>Mini_Project</module>
-                </setup>
-                <connection>
-                    <use>core_setup</use>
-                </connection>
-            </project_setup>
-        </resources>
-
-        <blocks>
-            <mini_project>
-                <class>Mini_Project_Block</class>
-            </mini_project>
-        </blocks>
-
-        <helpers>
-            <mini_project>
-                <class>Mini_Project_Helper</class>
-            </mini_project>
-        </helpers>
-
-    </global>
-    <admin>
-        <routers>
-            <adminhtml>
-                <args>
-                    <modules>
-                        <mini_project before="Mage_Adminhtml">Mini_Project_Adminhtml</mini_project>
-                    </modules>
-                </args>
-            </adminhtml>
-        </routers>
-    </admin>
 </config>
