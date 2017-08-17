@@ -28,7 +28,7 @@ class Mini_Project_Block_Adminhtml_Event_Edit extends Mage_Adminhtml_Block_Widge
     }
     public function getSaveUrl()
     {
-        return $this->getUrl('*/adminhtml_event/save');
+        return $this->getUrl('*/adminhtml_event/save', array('_current' => true));
     }
 
 }

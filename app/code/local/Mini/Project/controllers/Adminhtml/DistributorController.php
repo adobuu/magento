@@ -20,17 +20,18 @@ class Mini_Project_Adminhtml_DistributorController extends Mage_Adminhtml_Contro
         );
     }
 
-//    public function exportInchooCsvAction()
-//    {
-//        $fileName = 'project_mini.csv';
-//        $grid = $this->getLayout()->createBlock('mini_project/adminhtml_distributor_order_grid');
-//        $this->_prepareDownloadResponse($fileName, $grid->getCsvFile());
-//    }
-//
-//    public function exportInchooExcelAction()
-//    {
-//        $fileName = 'project_mini.xml';
-//        $grid = $this->getLayout()->createBlock('mini_project/adminhtml_distributor_order_grid');
-//        $this->_prepareDownloadResponse($fileName, $grid->getExcelFile($fileName));
-//    }
+    public function editAction()
+    {
+        if($eventId = $this->getRequest()->getParam('event_id')) {
+            Mage::register('current_event', Mage::getModel('project/test')->load($eventId));
+        }
+
+        $this->loadLayout();
+       // $this->_setActiveMenu('project/test');
+        $this->_addContent(
+          $this->getLayout()->createBlock('mini_project/adminhtml_event_edit')
+        );
+        return $this->renderLayout();
+    }
+
 }
