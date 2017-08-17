@@ -32,12 +32,12 @@ class Mini_Project_Block_Adminhtml_Distributor_Order_Grid extends Mage_Adminhtml
         $helper = Mage::helper('project');
        // $currency = (string) Mage::getStoreConfig(Mage_Directory_Model_Currency::XML_PATH_CURRENCY_BASE);
 
-        $this->addColumn(
-            'entity_id',
-            array(
-            'header' => $helper->__('Distributor #'),
-            'index'  => 'entity_id'
-        ));
+//        $this->addColumn(
+//            'entity_id',
+//            array(
+//            'header' => $helper->__('Distributor #'),
+//            'index'  => 'entity_id'
+//        ));
         $this->addColumn(
             'distributor_name',
             array(
@@ -52,34 +52,34 @@ class Mini_Project_Block_Adminhtml_Distributor_Order_Grid extends Mage_Adminhtml
                 'index'  => 'distributor_street_address_1',
 
             ));
-        $this->addColumn(
-            'distributor_street_address_2',
-            array(
-                'header' => Mage::helper('project')->__('Steet 2 (Optional)'),
-                'index'  => 'distributor_street_address_2',
-
-            ));
-        $this->addColumn(
-            'distributor_state',
-            array(
-                'header' => Mage::helper('project')->__('State'),
-                'index'  => 'distributor_state',
-
-            ));
-        $this->addColumn(
-            'distributor_country',
-            array(
-                'header' => Mage::helper('project')->__('Country'),
-                'index'  => 'distributor_country',
-
-            ));
-        $this->addColumn(
-            'distributor_telephone',
-            array(
-                'header' => Mage::helper('project')->__('Telephone'),
-                'index'  => 'distributor_telephone',
-
-            ));
+//        $this->addColumn(
+//            'distributor_street_address_2',
+//            array(
+//                'header' => Mage::helper('project')->__('Steet 2 (Optional)'),
+//                'index'  => 'distributor_street_address_2',
+//
+//            ));
+//        $this->addColumn(
+//            'distributor_state',
+//            array(
+//                'header' => Mage::helper('project')->__('State'),
+//                'index'  => 'distributor_state',
+//
+//            ));
+//        $this->addColumn(
+//            'distributor_country',
+//            array(
+//                'header' => Mage::helper('project')->__('Country'),
+//                'index'  => 'distributor_country',
+//
+//            ));
+//        $this->addColumn(
+//            'distributor_telephone',
+//            array(
+//                'header' => Mage::helper('project')->__('Telephone'),
+//                'index'  => 'distributor_telephone',
+//
+//            ));
         $this->addColumn(
             'distributor_status',
             array(

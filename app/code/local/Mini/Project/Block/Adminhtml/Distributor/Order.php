@@ -10,6 +10,14 @@ class Mini_Project_Block_Adminhtml_Distributor_Order extends Mage_Adminhtml_Bloc
 
 
         parent::__construct();
+
+                $this->_addButton('adddistributor', array(
+            'label' => Mage::helper('adminhtml')->__('Add Distributor'),
+            'onclick' => "setLocation('{$this->getUrl('/adminhtml_event/index')}')",
+            'class' => 'save'
+            ),-100);
         $this->_removeButton('add');
+
+
     }
 }
