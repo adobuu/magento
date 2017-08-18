@@ -1,14 +1,22 @@
 <?xml version="1.0"?>
 <config>
-    <menu>
-        <sales>
-            <children>
-                <mini_project translate="title" module="mini_project">
-                    <sort_order>10</sort_order>
-                    <title>Project - Mini</title>
-                    <action>adminhtml/order/</action>
-                </mini_project>
-            </children>
-        </sales>
-    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <project translate="title">
+                                        <title>Mini Project</title>
+                                    </project>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
 </config>
