@@ -1,4 +1,5 @@
 <?php
+
 $installer = $this;
 $installer->startSetup();
 $installer->run(" DROP TABLE IF EXISTS {$this->getTable('distributor')};
@@ -22,4 +23,6 @@ VALUES
 ('John Doe', 'Block 5 Lot 2, Subdivision 3', 'Talisay City', 'Philippines', 'Active');
 
 ");
+
+
 $installer->endSetup();

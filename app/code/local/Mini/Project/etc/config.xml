@@ -3,7 +3,7 @@
     <!--MODULE-->
     <modules>
         <Mini_Project>
-            <version>0.1.0</version>
+            <version>0.2.0</version>
         </Mini_Project>
     </modules>
     <!--END MODULE-->
@@ -54,7 +54,18 @@
                 <connection> 
                     <use>core_setup</use> 
                 </connection> 
-            </project_setup> 
+            </project_setup>
+
+            <add_product_attribute>
+                <setup>
+                    <module>Mini_Project</module>
+                    <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </add_product_attribute>
+             
             <project_write> 
                 <connection> 
                     <use>core_write</use> 
@@ -65,6 +76,7 @@
                     <use>core_read</use> 
                 </connection> 
             </project_read> 
+
         </resources> 
             <!--END RESOURCE-->
             <!--BLOCKS-->
