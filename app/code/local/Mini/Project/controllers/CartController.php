@@ -50,9 +50,26 @@ class Mini_Project_CartController extends Mage_Checkout_CartController
                 if (!$cart->getQuote()->getHasError()) {
 //                    $message = $this->__('%s was added to your shopping cart.', Mage::helper('core')->escapeHtml($product->getName()));
 //                    $this->_getSession()->addSuccess($message);
-//                    PUT THE DISTRIBUTOR HERE!!!!!
-                    $message = $this->__('You have added an item exclusively sold by %s', Mage::helper('core')->escapeHtml($product->getName()));
+
+                    $model = Mage::getModel('catalog/product')->load($product->getID()); // returns: 123,124
+                    $distriattribute = $model->getDistributorCode();
+                    $explode = explode(',', $distriattribute);
+
+
+
+                    $data = '';
+                    foreach($explode as $prods)
+                    {
+                        $collection = Mage::getModel('project/test')->load($prods);
+                        //       echo $collection->getEntityId() . " ";
+
+                        $data .=  ', ' . $collection->getDistributorName();
+                    }
+
+                    $message = $this->__('You have added an item exclusively sold by'. $data . '.');
                     $this->_getSession()->addSuccess($message);
+
+//
                 }
                 $this->_goBack();
             }
