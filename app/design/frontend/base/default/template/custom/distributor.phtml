@@ -1,0 +1,14 @@
+<?php
+$storeId = Mage::app()->getStore()->getId();
+$distributor = Mage::getResourceModel('project/test_collection')
+//    ->addAttributeToSelect('*')
+//    ->setStoreId($storeId)
+//    ->addStoreFilter($storeId)
+//    ->addAttributeToFilter('featured_product', 1)
+//    ->addAttributeToFilter('status', 1)
+//    ->setPageSize(4);
+?>
+<!--<ul class="products-grid products-grid--max-4-col ">-->
+    <?php foreach($distributor as $featuredDistributor) : ?>
+    <?php echo $featuredDistributor->getProductUrl();?>
+    <?php endforeach; ?>

@@ -1,0 +1,10 @@
+<?php
+    if($value = $this->getProduct())
+    {
+        //
+
+        echo $this->gridDistributorBlock($value);
+    }
+    else {
+        echo $this->distributorBlock();
+    }
